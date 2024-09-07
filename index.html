@@ -380,7 +380,7 @@
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="#" class="btn btn-primary py-4 px-5" id="downloadBtn">Download CV</a></p>
     			</div>
     			<div class="col-md-6 text-center ftco-animate">
     				<p><a href="https://www.linkedin.com/in/mithun-nair-3ba9b211a/" class="btn btn-primary py-4 px-5">LinkedIn</a></p>
@@ -389,6 +389,15 @@
     	</div>
     </section>
 
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function(event) {
+  event.preventDefault();  // Prevent the default link behavior
+  const link = document.createElement("a");
+  link.href = "MithunNair_DA2.pdf";  // Path to your file
+  link.download = "My_CV.pdf";  // Name of the file to download
+  link.click();  // Programmatically trigger the download
+});
+</script>
    
 
     <section class="ftco-section" id="project-section">
